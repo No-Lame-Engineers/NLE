@@ -1,39 +1,40 @@
 'use strict';
 
 (() => {
-    const chars = 'NOLAMEENGINEERSNOLAMOAGILAMRSOLMGIRSGIRS';
+    const chars = 'NOLAMEGIRS';
     const colorScheme = ['#003B00', '#008F11', '#00FF41', '#ACFBAC', '#E0FFDD'];
     const canvasFontSize = 20;
 
     const canvas = document.getElementById('matrix');
-    canvas.width = canvas.getBoundingClientRect().width;
-    canvas.height = canvas.getBoundingClientRect().height;
-
     const context = canvas.getContext('2d');
-    context.textAlign = "center";
-    context.font = `${canvasFontSize}px sans-serif`;
 
-    const interval = 50;
-
-    const columnCount = Math.floor(canvas.width / canvasFontSize);
-    const columnWidth = Math.floor(canvas.width / columnCount);
-
-    const xColumnStep = canvasFontSize;
-    const minYColumnStep = 30;
-    const maxYColumnStep = 40;
-    const maxYColumnNegativeOffset = canvasFontSize * 80;
+    const msInterval = 50;
 
     const minCharsLength = 8;
     const maxCharsLength = 30;
     const yCharStep = 25;
 
-    console.debug('Height: ', canvas.height, 'Width: ', canvas.width);
-    console.debug('Column width: ', columnWidth);
+    const minYColumnStep = 30;
+    const maxYColumnStep = 40;
+    const maxYColumnNegativeOffset = yCharStep * 80;
 
-    const xCoordinates = {};
     const yCoordinates = {};
     const yColumnStep = {};
     const columnCharLengths = {};
+
+    let columnCount, columnWidth, xColumnStep;
+
+    const calculateMeasures = () => {
+        canvas.width = canvas.getBoundingClientRect().width;
+        canvas.height = canvas.getBoundingClientRect().height;
+        context.textAlign = "center";
+        context.font = `${canvasFontSize}px sans-serif`;
+
+
+        columnCount = Math.floor(canvas.width / canvasFontSize);
+        columnWidth = Math.floor(canvas.width / columnCount);
+        xColumnStep = columnWidth;
+    };
 
     const randomInt = (maxExclusive, min = 0) => {
         min = Math.ceil(min);
@@ -41,15 +42,6 @@
 
         return Math.floor(Math.random() * (maxExclusive - min)) + min;
     }
-
-    const generateXCoordinates = () => {
-        let xOffset = columnWidth;
-
-        for (let i = 0; i < columnCount; i++) {
-            xCoordinates[i] = xOffset;
-            xOffset += columnWidth;
-        }
-    };
 
     const generateColumnsCharLength = () => {
         for (let i = 0; i < columnCount; i++) {
@@ -77,12 +69,21 @@
         }
     };
 
-    generateColumnsCharLength();
-    generateXCoordinates();
-    generateYCoordinates();
-    generateYColumnsStep();
+    const setInitials = () => {
+        calculateMeasures();
+        generateColumnsCharLength();
+        generateYCoordinates();
+        generateYColumnsStep();
+    };
 
-    console.debug('xCoordinates: ', xCoordinates, 'yCoordinates: ', yCoordinates);
+    setInitials();
+
+
+
+    console.debug('Height: ', canvas.height, 'Width: ', canvas.width);
+    console.debug('Column width: ', columnWidth);
+
+    console.debug('yCoordinates: ', yCoordinates);
     console.debug('columnCharLengths', columnCharLengths);
 
     const draw = () => {
@@ -118,7 +119,7 @@
 
                 context.fillStyle = fillStyle;
 
-                context.fillText(randomChar, (columnIndex + 1) * xColumnStep, yCoordinates[columnIndex] + yCharCoordinate);
+                context.fillText(randomChar, ((columnIndex + 1) * xColumnStep), yCoordinates[columnIndex] + yCharCoordinate);
 
                 const columnIsOutOfCanvas = yCoordinates[columnIndex] > canvas.height;
 
@@ -135,5 +136,7 @@
         }
     };
 
-    setInterval(draw, interval);
+    setInterval(draw, msInterval);
+
+    window.onresize = setInitials;
 })();
