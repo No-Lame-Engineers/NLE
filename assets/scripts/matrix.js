@@ -1,5 +1,7 @@
 'use strict';
 
+import { randomInt } from './utils.js';
+
 (() => {
     const chars = 'NOLAMEGIRS';
     const colorScheme = ['#003B00', '#008F11', '#00FF41', '#ACFBAC', '#E0FFDD'];
@@ -15,7 +17,7 @@
     const yCharStep = 25;
 
     const minYColumnStep = 30;
-    const maxYColumnStep = 40;
+    const maxYColumnStep = 45;
     const maxYColumnNegativeOffset = yCharStep * 80;
 
     const yCoordinates = {};
@@ -35,13 +37,6 @@
         columnWidth = Math.floor(canvas.width / columnCount);
         xColumnStep = columnWidth;
     };
-
-    const randomInt = (maxExclusive, min = 0) => {
-        min = Math.ceil(min);
-        maxExclusive = Math.floor(maxExclusive);
-
-        return Math.floor(Math.random() * (maxExclusive - min)) + min;
-    }
 
     const generateColumnsCharLength = () => {
         for (let i = 0; i < columnCount; i++) {

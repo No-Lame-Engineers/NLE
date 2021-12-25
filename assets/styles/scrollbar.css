@@ -1,0 +1,22 @@
+/* Chrome specific */
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #008F11;
+    /* background-color: #000A00; */
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px #00FF41;
+    /* background-color: #008F11; */
+}
+
+/* Mozilla specific */
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: #008F11 #000A00;
+    }
+}
