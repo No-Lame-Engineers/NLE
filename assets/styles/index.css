@@ -4,11 +4,11 @@
   --header-height: 50px;
 }
 
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   :root {
     --header-height: 70px;
   }
-} */
+}
 
 body {
   /* display: flex; */
@@ -21,7 +21,9 @@ body {
 }
 
 canvas {
-  height: calc(100vh - var(--header-height) - 6px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -37,10 +39,19 @@ header {
 
 main {
   color: #FFFFFF;
+  margin-top: calc(100vh - var(--header-height));
 }
 
 footer {
   padding: 24px 0;
+  background-color: #000A00;
+  position: relative;
+}
+
+@media (max-width: 568px) {
+  footer {
+    margin-top: 16px;
+  }
 }
 
 h1 {
@@ -48,9 +59,23 @@ h1 {
   font-size: 1rem;
 }
 
+.content {
+  background-color: #000A00;
+  position: relative;
+}
+
 .container {
+
   padding: 0 16px;
 }
+
+/* .container {
+  background-color: #000A00;
+} */
+
+/* .container {
+  padding: 0 16px;
+} */
 
 @media (min-width: 992px) {
   .container {
@@ -68,6 +93,7 @@ h1,
 article {
   text-shadow: -1px -1px 0 #008f11;
   line-height: 1.4;
+  padding-bottom: 16px;
 }
 
 .logo {
