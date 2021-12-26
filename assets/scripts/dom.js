@@ -1,4 +1,4 @@
-import { mainContentHasOverflow, isElementIntoView } from './utils.js';
+import { mainContentHasOverflow, isElementIntoView, hasScrolled } from './utils.js';
 
 (() => {
     const defineFooterIndent = () => {
@@ -11,8 +11,19 @@ import { mainContentHasOverflow, isElementIntoView } from './utils.js';
         contacts.classList.toggle('animate', isElementIntoView(contacts));
     };
 
-    const scrollIntoView = (elementId) => {
-        document.getElementById(elementId).scrollIntoView({ block: "start", inline: "nearest", behavior: "smooth" });
+    const defineArrow = () => {
+        document.getElementById('arrow').classList.toggle('scrolled', hasScrolled());
+    };
+
+    const attachHeaderClick = () => {
+        const header = document.getElementById('header');
+
+        header.addEventListener('click', () => {
+            hasScrolled() ? window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            }) : header.scrollIntoView({ behavior: 'smooth' });
+        });
     };
 
     window.addEventListener('resize', () => {
@@ -21,7 +32,11 @@ import { mainContentHasOverflow, isElementIntoView } from './utils.js';
 
     window.addEventListener('scroll', () => {
         animateContacts();
+        defineArrow();
     });
 
+    attachHeaderClick();
+    defineArrow();
     defineFooterIndent();
+    animateContacts();
 })();

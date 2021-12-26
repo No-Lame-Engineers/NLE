@@ -1,4 +1,5 @@
 @import url('./scrollbar.css');
+@import url('./footer.css');
 
 :root {
   --header-height: 50px;
@@ -37,30 +38,21 @@ header {
   top: -1px;
 }
 
+[role="button"] {
+  cursor: pointer;
+}
+
+.arrow::after {
+  content: '▲';
+}
+
+.arrow.scrolled::after {
+  content: '▼';
+}
+
 main {
   color: #FFFFFF;
   margin-top: calc(100vh - var(--header-height));
-}
-
-footer {
-  padding: 24px 0;
-  background-color: #000A00;
-  position: relative;
-}
-
-footer.has-indent {
-  margin-top: 16px;
-}
-
-footer .container {
-  display: flex;
-  justify-content: space-between;
-}
-
-@media (max-width: 568px) {
-  footer {
-    margin-top: 16px;
-  }
 }
 
 h1 {
@@ -103,95 +95,4 @@ article {
   text-shadow: -1px -1px 0 #008f11;
   line-height: 1.4;
   padding-bottom: 16px;
-}
-
-.logo {
-  display: block;
-  width: 21px;
-  height: 21px;
-  background-image: url('../icons/NLE.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-}
-
-.abbreviation {
-  margin: 0 0 0 8px;
-  line-height: 1;
-}
-
-.contacts {
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: #00FF41;
-  font-weight: bold;
-}
-
-.contact {
-  position: absolute;
-  right: 13px;
-}
-
-.contacts.animate .contact::before {
-  /* display: inline; */
-  content: '';
-  animation-name: typing;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  /* animation-fill-mode: forwards; */
-}
-
-.contacts.animate .terminal-cursor::after {
-  /* display: block; */
-  content: '';
-  animation-name: terminal-cursor;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes terminal-cursor {
-  from {
-    content: '';
-  }
-
-  to {
-    content: '█';
-  }
-}
-
-@keyframes typing {
-  12.5% {
-    content: 'C';
-  }
-
-  25% {
-    content: 'CO';
-  }
-
-  37.5% {
-    content: 'CON';
-  }
-
-  50% {
-    content: 'CONT';
-  }
-
-  62.5% {
-    content: 'CONTA';
-  }
-
-  75% {
-    content: 'CONTAC';
-  }
-
-  to {
-    content: 'CONTACT';
-  }
 }

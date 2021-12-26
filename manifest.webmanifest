@@ -1,0 +1,9 @@
+{
+    "name": "NO_LAME_ENGINEERS",
+    "short_name": "NLE",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#000A00",
+    "theme_color": "#000A00",
+    "description": "No lame engineers"
+}

@@ -15,3 +15,7 @@ export const mainContentHasOverflow = () => {
 export const isElementIntoView = (element) => {
     return element.getBoundingClientRect().top < window.innerHeight;
 };
+
+export const hasScrolled = () => {
+    return Boolean(window.scrollY);
+};
