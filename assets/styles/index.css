@@ -48,6 +48,11 @@ footer {
   position: relative;
 }
 
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 568px) {
   footer {
     margin-top: 16px;
@@ -114,4 +119,75 @@ article {
 .abbreviation {
   margin: 0 0 0 8px;
   line-height: 1;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #00FF41;
+  font-weight: bold;
+}
+
+.contact {
+  position: absolute;
+  right: 13px;
+}
+
+.contact::before {
+  /* display: inline; */
+  content: '';
+  animation-name: typing;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  /* animation-fill-mode: forwards; */
+}
+
+.terminal-cursor::after {
+  /* display: block; */
+  content: '';
+  animation-name: terminal-cursor;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes terminal-cursor {
+  from {
+    content: '';
+  }
+
+  to {
+    content: '█';
+  }
+}
+
+@keyframes typing {
+  12.5% {
+    content: 'C';
+  }
+
+  25% {
+    content: 'CO';
+  }
+
+  37.5% {
+    content: 'CON';
+  }
+
+  50% {
+    content: 'CONT';
+  }
+
+  62.5% {
+    content: 'CONTA';
+  }
+
+  75% {
+    content: 'CONTAC';
+  }
+
+  to {
+    content: 'CONTACT';
+  }
 }
