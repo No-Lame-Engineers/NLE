@@ -1,5 +1,3 @@
-'use strict';
-
 import { randomInt } from './utils.js';
 
 (() => {
@@ -133,5 +131,5 @@ import { randomInt } from './utils.js';
 
     setInterval(draw, msInterval);
 
-    window.onresize = setInitials;
+    window.addEventListener('resize', setInitials);
 })();

@@ -13,16 +13,18 @@
     <link rel="stylesheet" href="assets/styles/index.css">
 
     <title>NLE</title>
+    <!-- Add ico + browser bar theme color -->
 </head>
 
 <body>
     <canvas id="matrix"></canvas>
-    <main>
+    <main id="main">
         <div class="content">
             <div class="container">
                 <!-- <div> -->
-                <header role="button">
+                <header id="header" role="button">
                     <h1>NO_LAME_ENGINEERS</h1>
+                    <!-- ▼ -->
                     <div class="arrow">▲</div>
                 </header>
                 <article>
@@ -105,13 +107,14 @@
             </div>
         </div>
 
-        <footer>
+        <footer id="footer">
             <div class="container">
                 <div class="label">
                     <span class="logo"></span>
                     <h2 class="abbreviation">NLE</h2>
                 </div>
-                <a class="contacts" href="//www.linkedin.com/in/vslipchenko/" target="_blank" rel="noopener noreferrer">
+                <a id="contacts" class="contacts" href="//www.linkedin.com/in/vslipchenko/" target="_blank"
+                    rel="noopener noreferrer">
                     <span class="contact"></span>
                     <span class="terminal-cursor"></span>
                 </a>
@@ -119,6 +122,7 @@
         </footer>
     </main>
     <!-- Scripts -->
+    <script src="assets/scripts/dom.js" type="module"></script>
     <script src="assets/scripts/matrix.js" type="module"></script>
 </body>
 

@@ -48,6 +48,10 @@ footer {
   position: relative;
 }
 
+footer.has-indent {
+  margin-top: 16px;
+}
+
 footer .container {
   display: flex;
   justify-content: space-between;
@@ -134,7 +138,7 @@ article {
   right: 13px;
 }
 
-.contact::before {
+.contacts.animate .contact::before {
   /* display: inline; */
   content: '';
   animation-name: typing;
@@ -143,7 +147,7 @@ article {
   /* animation-fill-mode: forwards; */
 }
 
-.terminal-cursor::after {
+.contacts.animate .terminal-cursor::after {
   /* display: block; */
   content: '';
   animation-name: terminal-cursor;
