@@ -1,5 +1,3 @@
-'use strict';
-
 export const randomInt = (maxExclusive, min = 0) => {
     min = Math.ceil(min);
     maxExclusive = Math.floor(maxExclusive);

@@ -5,12 +5,12 @@
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px var(--primary-darker);
-    /* background-color: #000A00; */
+    box-shadow: inset 0 0 6px var(--primary-darker);
 }
 
 ::-webkit-scrollbar-thumb {
     -webkit-box-shadow: inset 0 0 6px var(--primary);
-    /* background-color: #008F11; */
+    box-shadow: inset 0 0 6px var(--primary);
 }
 
 /* Mozilla specific */

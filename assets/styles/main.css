@@ -44,9 +44,13 @@ abbr {
     margin-bottom: var(--unit-2);
 }
 
+.warning-container {
+    padding: var(--unit) 0;
+}
+
 .warning {
     display: flex;
-    /* #008F11 */
+    /* primary-darker */
     background-color: rgba(0, 143, 17, 0.15);
     padding: var(--unit-2);
     border-radius: 10px;

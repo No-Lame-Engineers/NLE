@@ -71,13 +71,11 @@ import { randomInt } from './utils.js';
 
     setInitials();
 
+    // console.debug('Height: ', canvas.height, 'Width: ', canvas.width);
+    // console.debug('Column width: ', columnWidth);
 
-
-    console.debug('Height: ', canvas.height, 'Width: ', canvas.width);
-    console.debug('Column width: ', columnWidth);
-
-    console.debug('yCoordinates: ', yCoordinates);
-    console.debug('columnCharLengths', columnCharLengths);
+    // console.debug('yCoordinates: ', yCoordinates);
+    // console.debug('columnCharLengths', columnCharLengths);
 
     const draw = () => {
         context.clearRect(0, 0, canvas.width, canvas.height);
