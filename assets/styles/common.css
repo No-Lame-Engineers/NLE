@@ -1,0 +1,21 @@
+.icon {
+    display: block;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    min-width: var(--icon-size);
+    min-height: var(--icon-size);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    padding: 0 var(--unit-2);
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,25 @@
+header {
+    background-color: var(--primary-darkest);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: -1px;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+.arrow {
+    text-shadow: var(--text-shadow);
+}
+
+.arrow::after {
+    content: '▲';
+}
+
+.arrow.scrolled::after {
+    content: '▼';
+}

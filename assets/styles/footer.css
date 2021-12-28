@@ -1,11 +1,7 @@
 footer {
-    padding: 24px 0;
-    background-color: #000A00;
+    padding: var(--unit-3) 0;
+    background-color: var(--primary-darkest);
     position: relative;
-}
-
-footer.has-indent {
-    margin-top: 16px;
 }
 
 footer .container {
@@ -13,20 +9,12 @@ footer .container {
     justify-content: space-between;
 }
 
-@media (max-width: 568px) {
-    footer {
-        margin-top: 16px;
-    }
+footer.has-indent {
+    margin-top: var(--unit-2);
 }
 
-.logo {
-    display: block;
-    width: 21px;
-    height: 21px;
+.icon-logo {
     background-image: url('../icons/NLE.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
 }
 
 .label {
@@ -35,7 +23,7 @@ footer .container {
 }
 
 .abbreviation {
-    margin: 0 0 0 8px;
+    margin-left: var(--unit);
     line-height: 1;
 }
 
@@ -43,7 +31,7 @@ footer .container {
     display: flex;
     align-items: center;
     position: relative;
-    color: #00FF41;
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -53,16 +41,13 @@ footer .container {
 }
 
 .contacts.animate .contact::before {
-    /* display: inline; */
     content: '';
     animation-name: typing;
     animation-duration: 0.8s;
     animation-fill-mode: forwards;
-    /* animation-fill-mode: forwards; */
 }
 
 .contacts.animate .terminal-cursor::after {
-    /* display: block; */
     content: '';
     animation-name: terminal-cursor;
     animation-duration: 1.5s;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2019 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.984252in" height="0.984252in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 984.25 984.25"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#00FF41;stroke-width:66.67;stroke-miterlimit:2.61313}
+    .str1 {stroke:#00FF41;stroke-width:66.67;stroke-miterlimit:2.61313}
+    .fil0 {fill:none}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_544586976">
+   <polyline class="fil0 str0" points="372.21,881.38 42.85,881.38 266.88,493.33 490.92,105.29 714.96,493.33 938.99,881.38 609.63,881.38 "/>
+   <path class="fil0 str0" d="M490.92 105.29l0 657.38m0 83.93l0 34.78"/>
+  </g>
+  <line class="fil0 str1" x1="490.92" y1="846.6" x2="490.92" y2= "916.04" />
+ </g>
+</svg>

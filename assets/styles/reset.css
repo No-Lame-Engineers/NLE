@@ -1,0 +1,16 @@
+body,
+p,
+ul,
+h1,
+h2 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+abbr {
+    text-decoration: none;
+}

@@ -1,0 +1,27 @@
+:root {
+    --unit-half: 4px;
+    --unit: 8px;
+    --unit-2: 16px;
+    --unit-3: 24px;
+
+    --primary-darkest: #000A00;
+    --primary-dark: #003B00;
+    --primary-darker: #008F11;
+    --primary: #00FF41;
+    --primary-lighter: #ACFBAC;
+    --primary-light: #E0FFDD;
+    --primary-lightest: #FFFFFF;
+
+    --icon-size: 21px;
+
+    --header-height: 50px;
+
+    --text-shadow: -1px -1px 0 var(--primary-darker), 1px -1px 0 var(--primary-darker), -1px 1px 0 var(--primary-darker), 1px 1px 0 var(--primary-darker);
+
+}
+
+@media (min-width: 992px) {
+    :root {
+        --header-height: 70px;
+    }
+}
