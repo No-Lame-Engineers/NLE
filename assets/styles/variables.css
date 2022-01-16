@@ -12,6 +12,9 @@
     --primary-light: #E0FFDD;
     --primary-lightest: #FFFFFF;
 
+    /* primary-darker */
+    --block-background: rgba(0, 143, 17, 0.15);
+
     --icon-size: 21px;
 
     --header-height: 50px;

@@ -14,8 +14,8 @@ import { randomInt } from './utils.js';
     const maxCharsLength = 30;
     const yCharStep = 25;
 
-    const minYColumnStep = 25;
-    const maxYColumnStep = 45;
+    const minYColumnStep = 15;
+    const maxYColumnStep = 30;
     const maxYColumnNegativeOffset = yCharStep * 80;
 
     const yCoordinates = {};

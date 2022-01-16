@@ -32,7 +32,7 @@ h1,
 article {
     text-shadow: -1px -1px 0 var(--primary-darker);
     line-height: 1.4;
-    padding: var(--unit-2) 0;
+    padding-top: var(--unit-2);
 }
 
 
@@ -50,8 +50,7 @@ abbr {
 
 .warning {
     display: flex;
-    /* primary-darker */
-    background-color: rgba(0, 143, 17, 0.15);
+    background-color: var(--block-background);
     padding: var(--unit-2);
     border-radius: 10px;
     border: 2px solid var(--primary);
