@@ -1,4 +1,4 @@
-import { mainContentHasOverflow, isElementIntoView, hasScrolled } from './utils.js';
+import { mainContentHasOverflow, isElementIntoView, hasScrolled, getCssVariable, setCssVariable } from './utils.js';
 
 (() => {
     const defineFooterIndent = () => {
@@ -26,6 +26,16 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled } from './utils.
         });
     };
 
+    const setTopOffset = () => {
+        const topOffset = document.documentElement.clientHeight - parseInt(getCssVariable('header-height')) + 'px';
+
+        setCssVariable('main-top-offset', topOffset);
+    };
+
+    const renderMainContents = () => {
+        document.getElementById('main').classList.add('initialized');
+    };
+
     window.addEventListener('resize', () => {
         defineFooterIndent();
     });
@@ -34,7 +44,11 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled } from './utils.
         animateContacts();
         defineArrow();
     });
+    // P.S. we can not depend on orientation solely, as we want to react to document size changes as well
+    window.resizeApi.pushCallbacks(setTopOffset);
 
+    setTopOffset();
+    renderMainContents();
     attachHeaderClick();
     defineArrow();
     defineFooterIndent();

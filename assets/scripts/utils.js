@@ -17,3 +17,11 @@ export const isElementIntoView = (element) => {
 export const hasScrolled = () => {
     return Boolean(window.scrollY);
 };
+
+export const getCssVariable = (name) => {
+    return getComputedStyle(document.documentElement).getPropertyValue(`--${name}`);
+};
+
+export const setCssVariable = (name, value) => {
+    return document.documentElement.style.setProperty(`--${name}`, value);
+};

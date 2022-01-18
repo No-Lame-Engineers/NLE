@@ -12,15 +12,15 @@
     --primary-light: #E0FFDD;
     --primary-lightest: #FFFFFF;
 
+    --text-shadow: -1px -1px 0 var(--primary-darker), 1px -1px 0 var(--primary-darker), -1px 1px 0 var(--primary-darker), 1px 1px 0 var(--primary-darker);
+
     /* primary-darker */
     --block-background: rgba(0, 143, 17, 0.15);
 
     --icon-size: 21px;
 
+    --main-top-offset: 0;
     --header-height: 50px;
-
-    --text-shadow: -1px -1px 0 var(--primary-darker), 1px -1px 0 var(--primary-darker), -1px 1px 0 var(--primary-darker), 1px 1px 0 var(--primary-darker);
-
 }
 
 @media (min-width: 992px) {

@@ -127,7 +127,7 @@ import { randomInt } from './utils.js';
         }
     };
 
-    setInterval(draw, msInterval);
+    window.resizeApi.pushCallbacks(setInitials);
 
-    window.addEventListener('resize', setInitials);
+    setInterval(draw, msInterval);
 })();
