@@ -110,7 +110,7 @@ import { randomInt } from './utils.js';
 
                 context.fillStyle = fillStyle;
 
-                context.fillText(randomChar, ((columnIndex + 1) * xColumnStep), yCoordinates[columnIndex] + yCharCoordinate);
+                context.fillText(randomChar, columnIndex * xColumnStep + canvasFontSize / 2, yCoordinates[columnIndex] + yCharCoordinate);
 
                 const columnIsOutOfCanvas = yCoordinates[columnIndex] > canvas.height;
 
