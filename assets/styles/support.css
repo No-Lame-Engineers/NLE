@@ -28,6 +28,24 @@
     background-image: url('../icons/heart.svg');
 }
 
+.support .icon-copy {
+    margin-left: var(--unit);
+}
+
+.icon-copy {
+    background-image: url('../icons/copy.svg');
+}
+
+@media (min-width: 576px) {
+    .support .icon-copy {
+        display: none;
+    }
+}
+
+.support-paragraph {
+    display: flex;
+}
+
 .support-paragraph:not(:last-child) {
     margin-bottom: var(--unit);
 }
@@ -35,4 +53,11 @@
 .currency-label {
     color: var(--primary);
     margin-right: var(--unit-half);
+}
+
+.support-wallet {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: space-between;
 }

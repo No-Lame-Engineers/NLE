@@ -26,6 +26,16 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled, getCssVariable,
         });
     };
 
+    const attachCopyClick = () => {
+        const copyButtons = document.getElementsByClassName('copy-wallet');
+
+        [...copyButtons].forEach((button) => {
+            button.addEventListener('click', (event) => {
+                navigator.clipboard.writeText(event.target.previousElementSibling.textContent);
+            });
+        });
+    };
+
     const setTopOffset = () => {
         const topOffset = document.documentElement.clientHeight - parseInt(getCssVariable('header-height')) + 'px';
 
@@ -51,6 +61,7 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled, getCssVariable,
     renderMainContents();
     attachHeaderClick();
     defineArrow();
+    attachCopyClick();
     defineFooterIndent();
     animateContacts();
 })();
