@@ -46,8 +46,9 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled, getCssVariable,
         document.getElementById('main').classList.add('initialized');
     };
 
+    // React on browser's address bar toggling on mobile devices
     window.addEventListener('resize', () => {
-        defineFooterIndent();
+        animateContacts(); // Has to be called on resize as well, as at this point window.innerHeight contains a relevant value 
     });
 
     window.addEventListener('scroll', () => {
@@ -55,7 +56,7 @@ import { mainContentHasOverflow, isElementIntoView, hasScrolled, getCssVariable,
         defineArrow();
     });
     // P.S. we can not depend on orientation solely, as we want to react to document size changes as well
-    window.resizeApi.pushCallbacks(setTopOffset);
+    window.resizeApi.pushCallbacks(setTopOffset, defineFooterIndent);
 
     setTopOffset();
     renderMainContents();
